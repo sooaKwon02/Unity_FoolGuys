@@ -11,6 +11,6 @@ public class MenuCharater : MonoBehaviour
         { transform.Rotate(new Vector3(0, 1, 0) * -rotationSpeed * Time.deltaTime); }
         if (Input.GetKey(KeyCode.LeftArrow))
         { transform.Rotate(new Vector3(0, 1, 0) * rotationSpeed * Time.deltaTime); }
-
     }
+    
 }

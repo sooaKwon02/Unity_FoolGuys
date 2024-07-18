@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
     {
         GameObject inven = GameObject.FindGameObjectWithTag("Inventory");
 
-        GameObject obj = Instantiate(inventory, transform.position, Quaternion.identity);
+        GameObject obj = Instantiate(inventory);
         RectTransform rect = obj.GetComponent<RectTransform>();
         rect.SetParent(inven.GetComponent<RectTransform>(), false);
         obj.transform.tag = inven.name.ToString();

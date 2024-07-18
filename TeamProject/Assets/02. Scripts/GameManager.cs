@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public Transform Player;
     public GameObject store;
     public GameObject inventoryPanel;
     public GameObject inventory;   
@@ -18,12 +18,17 @@ public class GameManager : MonoBehaviour
     public GameObject settingMenuPanel;
     public GameObject CustomPanel;
     public GameObject profilePanel;
-     
-    
-    
+    public GameObject settingPanel;
+    public GameObject audioPanl;
+    public GameObject keyboardPanel;
+    public GameObject settingExit;
+
+
+
 
     private void Start()
     {
+        Screen.SetResolution(1920, 1080, true);
         store.SetActive(false);
         inventoryPanel.SetActive(false);
         createRoom.SetActive(false);
@@ -32,6 +37,7 @@ public class GameManager : MonoBehaviour
         profilePanel.SetActive(false);
         settingMenuPanel.SetActive(false);
     }
+ 
     void ActiveMenu(bool active)
     {
         rankbuttonPanel.SetActive(active);
@@ -41,30 +47,59 @@ public class GameManager : MonoBehaviour
     }
     public void InventoryOnOff(bool check)
     {
-        inventoryPanel.SetActive(check);
-        if(!store.activeSelf)
+        inventoryPanel.SetActive(check);        
+        
+        if (!store.activeSelf)
         {
             ActiveMenu(!check);
+            if (check)
+                Player.position = new Vector2(2, 0);
+            else
+                Player.position = new Vector2(0, 0);
         }
-        
-    }
-   
-   
+        else if(store.activeSelf&&check)
+            Player.position = new Vector2(0, 0);
+        else
+            Player.position = new Vector2(-2, 0);
+
+
+    }      
     public void StoreOnOff(bool check)
     {
         store.SetActive(check);
+        inventoryPanel.SetActive(check);
         ActiveMenu(!check);
-        if (check) {
-            Camera.main.transform.position +=new Vector3(2,0,0) ;
-        }
-        else
-        Camera.main.transform.position -= new Vector3(2, 0, 0);
+        if(!check)
+            Player.position = new Vector2(0,0);
 
     }
     public void SettingOnOff(bool check)
     {
         settingMenuPanel.SetActive(check);
         ActiveMenu(!check);
+    }
+    public void SetMenu(int num)
+    {
+        settingExit.SetActive(true);
+        if (num == 0)
+        {
+            settingPanel.SetActive(true);
+        }
+        else if(num == 1)
+        {
+            audioPanl.SetActive(true);
+        }
+        else if (num == 2)
+        {
+            keyboardPanel.SetActive(true);
+        }
+        else
+        {
+            settingExit.SetActive(false);
+            settingPanel.SetActive(false);
+            audioPanl.SetActive(false);
+            keyboardPanel.SetActive(false);
+        }            
     }
    
     public void CreateRoomOnOff(bool check)

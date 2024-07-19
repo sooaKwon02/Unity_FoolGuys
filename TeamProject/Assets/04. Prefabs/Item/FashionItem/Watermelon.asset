@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f21dc3b2950f394a9ea41f844b4ef53, type: 3}
+  m_Script: {fileID: 11500000, guid: d2e39e3d60c867f42984d80c57f9ef35, type: 3}
   m_Name: Watermelon
   m_EditorClassIdentifier: 
   _name: Watermelon
   sprite: {fileID: 21300000, guid: 458b96fa7bc9e4c409f9b7f0b8bb2630, type: 3}
-  mesh: {fileID: 4300076, guid: eeebdeb8be91e0e43ae9170c2d8e4279, type: 3}
-  prefab: {fileID: 5175267955941368727, guid: 517e976be9ac3ee41a961dd8bf728615, type: 3}
-  price: 2000
-  priceImg: {fileID: 21300042, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  mesh: {fileID: -3500872997411817233, guid: 87f1d3e1f881742479c0f30526ecf0e4, type: 3}
+  prefab: {fileID: 919132149155446097, guid: 87f1d3e1f881742479c0f30526ecf0e4, type: 3}
   itemType: 1
-  itemparts: 1
+  price: 0
+  priceImg: {fileID: 21300008, guid: 857d6effbb662ec47a4731bb5bcf5fe9, type: 3}

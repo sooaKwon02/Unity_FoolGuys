@@ -47,20 +47,18 @@ public class GameManager : MonoBehaviour
     }
     public void InventoryOnOff(bool check)
     {
-        inventoryPanel.SetActive(check);        
+                
         
-        if (!store.activeSelf)
+        if (!store.activeSelf&& !CustomPanel.activeSelf)
         {
+            inventoryPanel.SetActive(check);
             ActiveMenu(!check);
             if (check)
                 Player.position = new Vector2(2, 0);
             else
                 Player.position = new Vector2(0, 0);
         }
-        else if(store.activeSelf&&check)
-            Player.position = new Vector2(0, 0);
-        else
-            Player.position = new Vector2(-2, 0);
+      
 
 
     }      
@@ -115,7 +113,18 @@ public class GameManager : MonoBehaviour
     public void CustomPanelOnOff(bool check)
     {
         CustomPanel.SetActive(check);
-        ActiveMenu(!check);
+        inventoryPanel.SetActive(check);
+        Player.GetComponent<CharacterCustom>().enabled = check;
+        Player.GetComponentInChildren<Animator>().enabled = !check;
+        if (check)
+        {
+            Player.position = new Vector2(2, 0);
+        }
+        else
+        {
+            Player.position = new Vector2(0, 0);
+        }                  
+            ActiveMenu(!check);
     }
     public void ProfilePanelOnOff(bool check)
     {

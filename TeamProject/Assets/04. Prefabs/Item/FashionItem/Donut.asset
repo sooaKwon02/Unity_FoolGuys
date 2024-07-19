@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f21dc3b2950f394a9ea41f844b4ef53, type: 3}
+  m_Script: {fileID: 11500000, guid: d2e39e3d60c867f42984d80c57f9ef35, type: 3}
   m_Name: Donut
   m_EditorClassIdentifier: 
   _name: Donut
   sprite: {fileID: 21300000, guid: af57cefb9e21e441da779138dfbfc9d1, type: 3}
-  mesh: {fileID: -8999309739244066695, guid: 7e6fcf30eabcaec43bb46e1d611f9df5, type: 3}
-  prefab: {fileID: 2622223880219897584, guid: 71be32ea5846afd419e33241296bc486, type: 3}
-  price: 4000
-  priceImg: {fileID: 21300042, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  mesh: {fileID: 3340957000141638778, guid: 20fc9c5e71adb0443bff79e76235884b, type: 3}
+  prefab: {fileID: 919132149155446097, guid: 20fc9c5e71adb0443bff79e76235884b, type: 3}
   itemType: 1
+  price: 0
+  priceImg: {fileID: 21300008, guid: 857d6effbb662ec47a4731bb5bcf5fe9, type: 3}

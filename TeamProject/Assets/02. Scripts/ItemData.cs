@@ -10,13 +10,21 @@ public class ItemData : MonoBehaviour
     Button button;
     public bool isEmpty;
     ItemData itemdata;
+    bool custom;
     
 
 
     private void Awake()
     {
         image = GetComponent<Image>();
-        button = GetComponent<Button>();      
+        button = GetComponent<Button>();
+        if (GetComponentInParent<Custom>() == true)
+        {
+            custom = true;
+        } 
+        else
+            custom = false;
+        
     }
     private void Start()
     {
@@ -32,8 +40,7 @@ public class ItemData : MonoBehaviour
             ItemTG itemTG = canvas.GetComponentInChildren<ItemTG>();
             itemTG.ItemInfo(item);
             itemTG.itemSwap = gameObject;
-            ItemGET(null);
-            
+            ItemGET(null);            
         }
        
     }
@@ -41,7 +48,11 @@ public class ItemData : MonoBehaviour
     {
         item = _item;
         itemdata = GetComponent<ItemData>();
-        ItemSet();        
+        ItemSet();     
+        if(custom)
+        {
+            FindObjectOfType<CharacterCustom>().CharSet();
+        }
     }
    
     void ItemSet()
@@ -57,6 +68,11 @@ public class ItemData : MonoBehaviour
             isEmpty = false;
             image.sprite = null;
             image.color = new Color(1, 1, 1, 0);
+            if(custom)
+            {
+                FindObjectOfType<CharacterCustom>().CharSet();
+            }
+            
         }        
     }  
 }

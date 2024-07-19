@@ -21,10 +21,10 @@ public class ItemTG : MonoBehaviour
     }
     private void Update()
     {
-        if(item != null)
-        {
-            LookFashion(player.transform.position);           
-        }       
+        //if(item != null)
+        //{
+        //    LookFashion(player.transform.position);           
+        //}       
         transform.position = Input.mousePosition;      
         if (Input.GetMouseButtonDown(0) && gameObject.activeSelf)
         {         
@@ -64,21 +64,7 @@ public class ItemTG : MonoBehaviour
                 gameObject.SetActive(false);
             }            
         }
-    }
-    void LookFashion(Vector2 player)
-    {
-        float camPosX = transform.position.x / 1920;
-        float camPosY = transform.position.y / 1080;
-       
-        Vector2 camPos = new Vector2(camPosX-0.5f, camPosY-0.5f);
-        
-        float customPos = Pos(camPos, player);
-        Debug.Log(customPos);
-        if (customPos < 0.2f)
-        {
-            Debug.Log("123");
-        }
-    }
+    }   
     float Pos(Vector2 obj,Vector2 pos)
     {      
 

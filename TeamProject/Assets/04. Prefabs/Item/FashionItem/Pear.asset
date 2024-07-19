@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f21dc3b2950f394a9ea41f844b4ef53, type: 3}
+  m_Script: {fileID: 11500000, guid: d2e39e3d60c867f42984d80c57f9ef35, type: 3}
   m_Name: Pear
   m_EditorClassIdentifier: 
   _name: Pear
   sprite: {fileID: 21300000, guid: 31740551f69654fb7bc2a39c35d57d9c, type: 3}
-  mesh: {fileID: 1211338327387119936, guid: ce779cf8c1f9f4e4d90ce2772d9f74fb, type: 3}
-  prefab: {fileID: 3993196853935147428, guid: ba93ae1410e341d41be192f9d77df500, type: 3}
-  price: 1000
-  priceImg: {fileID: 21300042, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  mesh: {fileID: 798035055718525027, guid: ebec41d2536eb3c4eafa75e0c95f6d31, type: 3}
+  prefab: {fileID: 919132149155446097, guid: ebec41d2536eb3c4eafa75e0c95f6d31, type: 3}
   itemType: 1
-  itemparts: 6
+  price: 0
+  priceImg: {fileID: 21300008, guid: 857d6effbb662ec47a4731bb5bcf5fe9, type: 3}

@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f21dc3b2950f394a9ea41f844b4ef53, type: 3}
+  m_Script: {fileID: 11500000, guid: d2e39e3d60c867f42984d80c57f9ef35, type: 3}
   m_Name: Banana
   m_EditorClassIdentifier: 
   _name: Banana
   sprite: {fileID: 21300000, guid: 50e0347d981414d189ff77217bc6e69c, type: 3}
-  mesh: {fileID: 3216447080179446721, guid: 0a6a2491386b3be489501ed9d6f51b69, type: 3}
-  prefab: {fileID: 2230530226155236490, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
-  price: 87978
-  priceImg: {fileID: 21300042, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  prefab: {fileID: 919132149155446097, guid: 0a6a2491386b3be489501ed9d6f51b69, type: 3}
   itemType: 0
+  price: 10000
+  priceImg: {fileID: 21300010, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}

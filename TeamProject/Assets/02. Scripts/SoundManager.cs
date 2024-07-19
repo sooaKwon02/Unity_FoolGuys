@@ -5,27 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    
-    AudioSource audioSource;
+    [HideInInspector]
+    public AudioSource audioSource;
     public AudioClip[] audioClips;
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();       
         PlayClip();
+        audioSource.Play();
     }
             
     void PlayClip()
     {
-        audioSource.clip=audioClips[(ScenesManager.SceneNum)-1];
-        audioSource.Play();
-    }
-
-    public void SoundMute()
-    {
-
-    }
-        
-        
-  
-
+        audioSource.clip = audioClips[0];
+    } 
 }

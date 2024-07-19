@@ -185,7 +185,6 @@ MonoBehaviour:
   jumpForce: 5
   isGround: 0
   slideCollider: {fileID: 3323184941708508654}
-  catchPoint: {fileID: 0}
 --- !u!136 &3323184941572198166
 CapsuleCollider:
   m_ObjectHideFlags: 0
